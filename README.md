@@ -79,7 +79,34 @@ Verify that SpecStory is logging correctly by running a short AI interaction and
 
 > Reminder to update your [status](https://forms.gle/SLXdJk3SbjHCYnpd9) once you have completed this step.
 
-## 5) Practice Tasks
+## 5) Install Git Hooks
+
+To help you avoid accidentally committing AI indicators, we've created git hooks that automatically block commits and pushes containing AI-related patterns. These hooks scan your commit messages and code for references to AI tools, model names, and common AI-generated phrases.
+
+### Installation
+
+The hooks are already active in this repository. To install them in other repositories (like your assigned project):
+
+1. Navigate to the repository where you want the hooks:
+
+   ```bash
+   cd /path/to/your/repo
+   ```
+
+2. Run the installation script from this onboarding directory:
+   ```bash
+   /path/to/onboarding/git-hooks-template/install-hooks.sh
+   ```
+
+The installer will activate three hooks:
+
+- **commit-msg** - Blocks AI indicators in commit messages
+- **pre-commit** - Blocks AI indicators in staged file contents
+- **pre-push** - Final safety check before pushing to remote
+
+For more details, see `git-hooks-template/README.md`.
+
+## 6) Practice Tasks
 
 We’ve set up a small project in `playground` that provides a more detailed guided tour of both Claude Code and Cursor. The project is a simple unit-conversion toolkit (temperature, distance, weight) with a CLI, dispatcher, and test suite designed specifically for experimentation.
 
@@ -95,7 +122,7 @@ Please use AI freely throughout the tasks; however, because reviewers are blinde
 - Boilerplate phrases like “As an AI assistant, I…”
 - Tags or markers such as `[AI]`, `[Cursor]`, `[Claude]`
 
-Git hooks will catch common markers, but please double-check your changes before committing.
+The git hooks will catch common markers, but please double-check your changes before committing.
 
 ### Completion
 
