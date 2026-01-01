@@ -1,5 +1,9 @@
 {
-  "precision": 2,
+  "precision": {
+    "temperature": 2,
+    "distance": 2,
+    "weight": 2
+  },
   "temperature": {
     "defaultFrom": "C",
     "defaultTo": "F"

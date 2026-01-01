@@ -1,0 +1,7 @@
+/data/
+.claude/
+.specstory.zip
+data.zip
+.env
+install_specstory_wrapper.sh
+specstory_wrapper.py
